@@ -13,7 +13,7 @@ class LogInScreen extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.indigoAccent,
+        backgroundColor: Colors.redAccent,
         centerTitle: true,
         title: const Text(
           "Login",
@@ -62,7 +62,8 @@ class LogInScreen extends StatelessWidget {
 
                   return ElevatedButton(
                     onPressed: () {
-                      WidgetsBinding.instance!.addPostFrameCallback((timeStamp) {
+                      WidgetsBinding.instance!
+                          .addPostFrameCallback((timeStamp) {
                         context.read<UserLoginCubit>().userLogin(
                             _emailController.text.toString(),
                             _passwordController.text.toString());
